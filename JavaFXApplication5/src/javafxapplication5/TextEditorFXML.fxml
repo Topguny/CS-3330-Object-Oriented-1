@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="texteditor.TextEditorFXMLController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Font">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleFontArial" text="Arial" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleFontSerif" text="Serif" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleFontComicSans" text="ComicSansMS" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleFontConsolas" text="Consolas" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Font Size">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleFontSizeSmall" text="8" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleFontSizeNormal" text="12" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleFontSizeLarge" text="16" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleFontSizeHuge" text="20" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Font Decor">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleDecorItalic" text="Italic" />
+                <MenuItem mnemonicParsing="false" onAction="#handleDecorPlain" text="Plain" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleDecorBold" text="Bold" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Print">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handlePrint" text="Print" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" wrapText="true" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>
